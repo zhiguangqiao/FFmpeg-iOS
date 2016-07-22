@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/chrisballinger/FFmpeg-iOS.git", :tag => "2.8.3", :submodules => true }
 
   s.default_subspec = 'precompiled'
-
+  s.frameworks = 'AVFoundation', 'CoreMedia'
   s.subspec 'precompiled' do |ss|
     ss.source_files        = 'ffmpeg-ios-static-libs/include/**/*.h'
     ss.public_header_files = 'ffmpeg-ios-static-libs/include/**/*.h'
